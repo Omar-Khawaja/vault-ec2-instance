@@ -72,6 +72,7 @@ systemctl daemon-reload
 # set environment variable
 
 echo "export VAULT_ADDR=http://127.0.0.1:8200" >> /root/.bashrc
+echo "export VAULT_ADDR=http://127.0.0.1:8200" >> /home/ubuntu/.bashrc
 # enable and start services
 
 systemctl enable vault

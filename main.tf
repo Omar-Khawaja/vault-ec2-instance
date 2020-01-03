@@ -7,7 +7,7 @@ resource "aws_instance" "ec2-instance-test" {
   ami                    = "ami-0cfee17793b08a293"
   instance_type          = "t2.micro"
   vpc_security_group_ids = ["${aws_security_group.ec2_instance_test_sg.id}"]
-  key_name               = "omar-test"
+  key_name               = var.key_name
 
   root_block_device {
     volume_type           = "gp2"
