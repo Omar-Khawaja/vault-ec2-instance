@@ -33,6 +33,8 @@ data "template_file" "user_data" {
 resource "aws_security_group" "ec2_instance_test_sg" {
   name = "test-cluster-sg"
 
+# SSH access
+
   ingress {
     from_port   = 22
     to_port     = 22
@@ -40,9 +42,11 @@ resource "aws_security_group" "ec2_instance_test_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+# Vault web interface
+
   ingress {
-    from_port   = 8500
-    to_port     = 8500
+    from_port   = 8200
+    to_port     = 8200
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
