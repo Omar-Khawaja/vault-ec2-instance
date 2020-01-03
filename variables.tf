@@ -1,5 +1,5 @@
 variable "key_name" {
-  description = "name of key you want to use to log into instance"
+  description = "name of SSH key you want to use to log into instance"
 }
 
 variable "vault_version" {
